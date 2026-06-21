@@ -6,7 +6,7 @@
   copyright: [
   Copyright 2026 © Yawo Kpotufe, fractional CTO,
   yawo.kpotufe\@hotepconseil.com",
-
+  ISBN-13: 9798183611878
   All rights reserved.
   ],
   date: datetime.today(),
