@@ -4,7 +4,7 @@
   title: "",
   author: "",
   copyright: [
-  Copyright © Yawo Kpotufe, fractional CTO,
+  Copyright 2026 © Yawo Kpotufe, fractional CTO,
   yawo.kpotufe\@hotepconseil.com",
 
   All rights reserved.
