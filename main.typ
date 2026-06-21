@@ -1,7 +1,7 @@
 #import "@preview/orange-book:0.7.1": book
 
 #show: book.with(
-  title: "Vibe coding for Lawyers",
+  title: "",
   author: "",
   copyright: [
   Copyright © Yawo Kpotufe, fractional CTO,
@@ -13,7 +13,8 @@
   lang: "en",
   main-color: rgb("#434689"),
   lowercase-references: false,
-  cover: image("./images/cover-ai-brain.jpg"),
+  cover: image("./images/cover.png"),
+  cover-background:none,
   width: 6in,
   height: 9in,
   margin: (x: 2.4cm, top: 2.4cm, bottom: 2.2cm),
@@ -41,7 +42,20 @@
 // Optional: Do the same for sub-sections (level 3) if you use them
 #show heading.where(level: 3): set heading(numbering: none)
 
+// 1. Define the global table style safely using table.with
+#set table(
+  align: (x, y) =>
+    if x == 0 { right } else { left } +
+    if y == 0 { bottom } else { top },
+  fill: (_, y) => if calc.odd(y) { blue.lighten(90%) },
+  stroke: none,
+)
 
+// 2. Set the global table text size 
+#show table: set text(size: 9pt)
+
+// 3. Style the header row cells specifically
+#show table.cell.where(y: 0): set text(weight: "bold", size: 10pt)
 
 #include "part0.typ"
 #include "part1.typ"
